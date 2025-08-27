@@ -1,0 +1,164 @@
+/* TIPOGRAFÍA */
+@font-face {
+    font-family: 'NSans';
+    src: url('../fonts/NSans-light.otf') format('opentype');
+    font-weight: 300; /* light */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NSans';
+    src: url('../fonts/NSans-regular.otf') format('opentype');
+    font-weight: 400; /* normal */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NSans';
+    src: url('../fonts/NSans-medium.otf') format('opentype');
+    font-weight: 500; /* medium */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NSans-bold';
+    src: url('../fonts/NSans-bold.otf') format('opentype');
+    font-weight: 700; /* bold */
+    font-style: normal;
+}
+
+
+/* ===== Estilos de Login ===== */
+
+/* Imagen de fondo aplicada a todo el cuerpo */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'NSans', sans-serif;
+    background: url('../img/login-illustration.jpg') center center/cover no-repeat;
+    height: 100vh;
+    overflow: hidden;
+}
+/** TAMAÑOS Y TIPO DE FUENTE en formulario **/
+/* Ajustes de peso según la jerarquía */
+h1, h2 {
+    font-family: 'NSans-bold', sans-serif;
+    font-weight: 700; /* Bold para títulos */
+}
+
+label {
+    font-family: 'NSans', sans-serif;
+    font-weight: 500; /* Regular para texto normal */
+}
+/* Enlace de cotización */
+small, a{
+    font-family: 'NSans', sans-serif;
+    font-weight: 300; /* Regular para texto normal */
+}
+/* Input de contraseña y correo */
+#password, #exampleFormControlEmail1{
+    font-family: 'NSans', sans-serif;
+    font-weight: 400; /* Texto mediano */
+}
+/* Botón de iniciar sesión */
+#iniciar_sesion{
+    font-family: 'NSans', sans-serif;
+    font-weight: 500; /* Texto mediano */
+}
+/* ------------------------------------------ */
+
+/* Formulario principal */
+#my-form {
+    max-width: 420px;
+    width: 100%;
+}
+
+/* Caja blanca del formulario (sin transparencia) */
+#my-form > div {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+#my-form > div:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Logo */
+#my-form img {
+    max-width: 180px;
+}
+
+/* Título */
+#my-form h2 {
+    margin-bottom: 1.5rem;
+}
+
+/* Enlace de contraseña */
+#forgotPassword {
+    display: inline-block;
+    margin-top: 5px;
+}
+
+/* Botón login */
+#iniciar_sesion {
+    transition: transform 0.2s ease-in-out;
+}
+
+#iniciar_sesion:hover {
+    transform: scale(1.02);
+}
+
+/* Layout de pantalla dividida */
+.login-split {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Izquierda: formulario login */
+.login-left {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background: transparent;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+/* Derecha: espacio con el logo centrado */
+.login-right {
+    width: 60%;
+    height: 100vh;
+    position: relative;
+}
+
+/* Logo superpuesto */
+.logomv-illustration {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 60%;
+    z-index: 2;
+}
+
+/* Responsivo: solo el formulario visible en pantallas pequeñas */
+@media (max-width: 992px) {
+    .login-split {
+        flex-direction: column;
+    }
+
+    .login-left, .login-right {
+        width: 100%;
+        height: auto;
+    }
+
+    .login-right {
+        display: none;
+    }
+}
